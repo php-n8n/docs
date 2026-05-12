@@ -1,8 +1,19 @@
 import { defineConfig } from 'vitepress'
 
-const siteUrl = 'https://php-n8n.com'
+const base = normalizeBase(process.env.DOCS_BASE ?? '/')
+const siteOrigin = (process.env.DOCS_SITE_ORIGIN ?? 'https://php-n8n.com').replace(/\/$/, '')
+const siteUrl = base === '/' ? siteOrigin : `${siteOrigin}${base.replace(/\/$/, '')}`
 const siteTitle = 'PHP n8n Client'
 const siteDescription = 'Strongly typed, PSR-only PHP client for triggering n8n webhooks and tracking workflow executions.'
+
+function normalizeBase(value: string): string {
+  const withLeadingSlash = value.startsWith('/') ? value : `/${value}`
+  return withLeadingSlash.endsWith('/') ? withLeadingSlash : `${withLeadingSlash}/`
+}
+
+function withBase(path: string): string {
+  return `${base}${path.replace(/^\//, '')}`
+}
 
 function canonicalPath(relativePath: string): string {
   let path = relativePath
@@ -15,17 +26,18 @@ function canonicalPath(relativePath: string): string {
 }
 
 export default defineConfig({
+  base,
   title: siteTitle,
   description: siteDescription,
   lang: 'en-US',
   cleanUrls: true,
   lastUpdated: true,
   sitemap: {
-    hostname: siteUrl,
+    hostname: siteOrigin,
   },
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/php-n8n-logo.png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/php-n8n-logo.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: withBase('/php-n8n-logo.png') }],
+    ['link', { rel: 'apple-touch-icon', href: withBase('/php-n8n-logo.png') }],
     ['meta', { name: 'theme-color', content: '#ffffff' }],
     ['meta', { name: 'keywords', content: 'PHP n8n client, n8n webhook PHP, PSR-18 n8n client, PHP workflow automation, n8n execution tracking' }],
     ['meta', { property: 'og:type', content: 'website' }],
@@ -47,7 +59,7 @@ export default defineConfig({
     ]
   },
   themeConfig: {
-    logo: '/php-n8n-logo.png',
+    logo: withBase('/php-n8n-logo.png'),
     nav: [
       { text: 'Guide', link: '/guide/getting-started' },
       { text: 'Class Reference', link: '/reference/' },

@@ -37,6 +37,9 @@ jobs:
         run: npm ci
 
       - name: Build docs
+        env:
+          DOCS_BASE: /
+          DOCS_SITE_ORIGIN: https://php-n8n.com
         run: npm run docs:build
 
       - name: Configure Pages

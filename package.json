@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "docs:dev": "vitepress dev . --host 0.0.0.0",
+    "docs:dev": "DOCS_BASE=/ DOCS_SITE_ORIGIN=http://localhost:5173 vitepress dev . --host 0.0.0.0",
     "docs:build": "vitepress build .",
     "docs:preview": "vitepress preview . --host 0.0.0.0"
   },

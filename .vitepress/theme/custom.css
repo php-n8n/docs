@@ -1,7 +1,6 @@
 :root {
   --php-n8n-php: #5060d0;
   --php-n8n-n8n: #ff3060;
-  --vp-layout-max-width: 1500px;
   --vp-c-brand-1: #e02f5f;
   --vp-c-brand-2: #ff3060;
   --vp-c-brand-3: #ff6b8d;
@@ -144,33 +143,6 @@
   padding-top: 24px;
 }
 
-.VPDoc .container {
-  max-width: var(--vp-layout-max-width) !important;
-}
-
-.VPDoc.has-aside .content {
-  max-width: calc(100% - 300px) !important;
-}
-
-.VPDoc.has-aside .content-container {
-  max-width: 960px !important;
-}
-
-.VPDoc:not(.has-aside) .content,
-.VPDoc:not(.has-aside) .content-container {
-  max-width: 1080px !important;
-}
-
-.vp-doc div[class*='language-'] {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 .vp-doc a {
   text-underline-offset: 3px;
-}
-
-.vp-doc table {
-  display: table;
-  width: 100%;
 }

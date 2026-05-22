@@ -1,10 +1,10 @@
 ---
-title: PHP n8n Client
-description: Strongly typed, PSR-only PHP client for triggering n8n webhooks and tracking workflow executions.
+title: PHP n8n Client Documentation
+description: Documentation for php-n8n/client, a PHP n8n client for triggering n8n webhooks and tracking workflow executions with PSR-7, PSR-17, and PSR-18.
 layout: home
 hero:
-  text: Strongly typed PHP client for n8n webhooks
-  tagline: Trigger n8n webhooks and track workflow executions with PSR-7, PSR-17, and PSR-18.
+  text: 'php-n8n/client: typed PHP client for n8n webhooks'
+  tagline: Documentation for php-n8n/client, the PSR-based PHP n8n client for webhooks and execution tracking.
   image:
     src: /php-n8n-logo.png
     alt: PHP n8n Client
@@ -39,9 +39,11 @@ features:
   </a>
 </div>
 
-## What This Package Does
+## What Is php-n8n/client?
 
 `php-n8n/client` is a lightweight PHP library for applications that need to trigger n8n workflows through webhooks and optionally track executions through the n8n API.
+
+It is the package behind searches such as `php-n8n`, `php n8n`, `php-n8n client`, `php n8n client`, `php-n8n-client`, and `n8n PHP client`.
 
 It is designed around standards rather than framework integrations. The runtime dependencies are PSR interfaces:
 

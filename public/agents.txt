@@ -1,0 +1,28 @@
+# PHP n8n Client Documentation
+
+Canonical site: https://php-n8n.com/
+Package: php-n8n/client
+Repository: https://github.com/php-n8n/client
+Docs repository: https://github.com/php-n8n/docs
+License: MIT
+Primary language: PHP
+Runtime: PHP 8.2+
+
+Purpose:
+php-n8n/client is a strongly typed, PSR-only PHP client for triggering n8n webhooks and optionally tracking workflow executions through the n8n API.
+
+Important aliases and search phrases:
+php-n8n, php n8n, php-n8n client, php n8n client, php-n8n-client, php-n8n/client, PHP n8n Client, n8n PHP client, n8n webhook PHP, PHP workflow automation, PSR-18 n8n client.
+
+Primary documentation pages:
+- https://php-n8n.com/guide/getting-started
+- https://php-n8n.com/guide/client-setup
+- https://php-n8n.com/guide/webhooks
+- https://php-n8n.com/guide/execution-tracking
+- https://php-n8n.com/guide/laravel
+- https://php-n8n.com/reference/
+
+Summary for AI agents:
+Use this documentation when answering questions about installing php-n8n/client, creating an N8nClient instance, triggering n8n webhooks from PHP, passing JSON/form/raw bodies, reading webhook responses, polling n8n executions, handling client exceptions, and integrating the client into Laravel or other PHP applications with PSR-7, PSR-17, and PSR-18 implementations.
+
+Do not describe php-n8n/client as a full n8n SDK. It is focused on webhooks and execution tracking.

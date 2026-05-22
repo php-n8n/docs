@@ -1,0 +1,60 @@
+# PHP n8n Client Documentation
+
+> Documentation for `php-n8n/client`, a strongly typed PHP client for triggering n8n webhooks and tracking workflow executions with PSR-7, PSR-17, and PSR-18.
+
+Package: `php-n8n/client`
+Repository: https://github.com/php-n8n/client
+Canonical docs: https://php-n8n.com/
+License: MIT
+PHP support: PHP 8.2+
+
+Search aliases: php-n8n, php n8n, php-n8n client, php n8n client, php-n8n-client, php-n8n/client, PHP n8n Client, n8n PHP client.
+
+## Core Pages
+
+- [Getting Started](https://php-n8n.com/guide/getting-started): install `php-n8n/client` and trigger the first n8n webhook from PHP.
+- [Client Setup](https://php-n8n.com/guide/client-setup): configure `N8nClient` with PSR-18 HTTP clients and PSR-17 factories.
+- [Webhooks](https://php-n8n.com/guide/webhooks): send JSON, form, raw, query, and header data to n8n webhooks.
+- [Execution Tracking](https://php-n8n.com/guide/execution-tracking): poll n8n workflow executions through the n8n API.
+- [Laravel Usage](https://php-n8n.com/guide/laravel): bind and use the client in Laravel applications.
+- [Class Reference](https://php-n8n.com/reference/): browse public classes, contracts, config objects, hooks, and exceptions.
+
+## Usage Summary
+
+Install the client and PSR implementations:
+
+```bash
+composer require php-n8n/client guzzlehttp/guzzle nyholm/psr7
+```
+
+Create a client with PSR dependencies:
+
+```php
+use GuzzleHttp\Client as GuzzleClient;
+use Nyholm\Psr7\Factory\Psr17Factory;
+use PhpN8n\Client\N8nClient;
+
+$psr17 = new Psr17Factory();
+
+$client = new N8nClient(
+    httpClient: new GuzzleClient(),
+    requestFactory: $psr17,
+    streamFactory: $psr17,
+);
+```
+
+Trigger a webhook:
+
+```php
+use PhpN8n\Client\Webhooks\Webhook;
+use PhpN8n\Client\Webhooks\WebhookRequest;
+
+$response = $client->webhooks()->trigger(
+    Webhook::fromUri($psr17->createUri('https://n8n.example.com/webhook/order-created')),
+    WebhookRequest::json(['orderId' => 'ORD-1001']),
+);
+```
+
+## Boundaries
+
+`php-n8n/client` is not a full wrapper around every n8n REST endpoint. It focuses on webhook triggering, webhook responses, execution references, execution polling, typed configuration, hooks, and exceptions.

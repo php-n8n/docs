@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+# AI crawler context: https://php-n8n.com/llms.txt
+# AI agent guidance: https://php-n8n.com/agents.txt
 Sitemap: https://php-n8n.com/sitemap.xml

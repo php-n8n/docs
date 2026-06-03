@@ -170,6 +170,7 @@ export default defineConfig({
           text: 'Community',
           items: [
             { text: 'Contributing', link: '/community/contributing' },
+            { text: 'Security', link: '/community/security' },
             { text: 'Contributors', link: '/community/contributors' },
             { text: 'Ecosystem', link: '/community/ecosystem' },
           ],

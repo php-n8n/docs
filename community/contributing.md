@@ -53,6 +53,12 @@ This runs Composer validation, PHPUnit, PSR-12 checks, and PHPStan.
 - Update docs when public behavior changes.
 - Prefer explicit typed APIs over magic behavior.
 
+## Security Reports
+
+Report security vulnerabilities privately. Do not open public issues for suspected vulnerabilities.
+
+See [Security](/community/security) for the supported versions and reporting process.
+
 ## Recognition
 
 People who contribute to the package or documentation can be recognized through the project site and repository history.

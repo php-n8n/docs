@@ -11,7 +11,18 @@ The source changelog lives in the client repository:
 https://github.com/php-n8n/client/blob/main/CHANGELOG.md
 ```
 
-## v1.0.0 - Unreleased
+## v1.0.2 - 2026-06-03
+
+- Added a security policy with supported versions and private vulnerability reporting instructions.
+- No runtime API changes.
+
+## v1.0.1 - 2026-06-03
+
+- Added post-CI repository dispatch automation using `saedyousef/repository-dispatch`.
+- Added a repository-dispatch receiver workflow that builds and uploads a Composer package archive after CI passes.
+- No runtime API changes.
+
+## v1.0.0 - 2026-05-10
 
 - Added webhook triggering through `$client->webhooks()->trigger()`.
 - Added execution fetching and polling through the n8n API.
@@ -24,4 +35,6 @@ https://github.com/php-n8n/client/blob/main/CHANGELOG.md
 
 `php-n8n/client` follows Semantic Versioning.
 
-The first public tag is expected to be `v1.0.0`, establishing the initial stable public API for the client package.
+The latest stable release is `v1.0.2`.
+
+`v1.0.0` established the initial stable public API for the client package. Future breaking changes will be reserved for major releases.

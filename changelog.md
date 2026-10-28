@@ -11,6 +11,15 @@ The source changelog lives in the client repository:
 https://github.com/php-n8n/client/blob/main/CHANGELOG.md
 ```
 
+## v1.0.3 - 2026-10-28
+
+- Pinned all GitHub Actions to full commit SHAs and upgraded `actions/checkout`, `actions/upload-artifact`, and `codecov/codecov-action` to v7.
+- Fixed a template injection in the post-CI build workflow by passing the dispatch payload through `env` and validating the commit SHA.
+- Restricted default `GITHUB_TOKEN` permissions in CI to read-only and disabled checkout credential persistence.
+- Added `composer audit` to CI and Dependabot for GitHub Actions and Composer dependency updates.
+- Excluded development files from Composer dist archives.
+- No runtime API changes.
+
 ## v1.0.2 - 2026-06-03
 
 - Added a security policy with supported versions and private vulnerability reporting instructions.
@@ -35,6 +44,6 @@ https://github.com/php-n8n/client/blob/main/CHANGELOG.md
 
 `php-n8n/client` follows Semantic Versioning.
 
-The latest stable release is `v1.0.2`.
+The latest stable release is `v1.0.3`.
 
 `v1.0.0` established the initial stable public API for the client package. Future breaking changes will be reserved for major releases.

@@ -11,7 +11,8 @@ Security updates are provided for the latest stable release of `php-n8n/client`.
 
 | Version | Supported |
 | --- | --- |
-| v1.0.2 | Yes |
+| v1.0.3 | Yes |
+| v1.0.2 | No |
 | v1.0.1 | No |
 | v1.0.0 | No |
 

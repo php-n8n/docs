@@ -5,11 +5,12 @@ description: Version list for the PHP n8n Client documentation.
 
 # Versions
 
-The documentation currently covers `php-n8n/client` v1. The latest stable patch release is `v1.0.2`.
+The documentation currently covers `php-n8n/client` v1. The latest stable patch release is `v1.0.3`.
 
 | Version | Status | Documentation | Notes |
 | --- | --- | --- | --- |
-| v1.0.2 | Latest stable | [Read v1 docs](/guide/getting-started) | Adds the security policy; no runtime API changes. |
+| v1.0.3 | Latest stable | [Read v1 docs](/guide/getting-started) | CI/CD hardening release; no runtime API changes. |
+| v1.0.2 | Superseded | [Read v1 docs](/guide/getting-started) | Adds the security policy; no runtime API changes. |
 | v1.0.1 | Superseded | [Read v1 docs](/guide/getting-started) | CI/CD maintenance release; no runtime API changes. |
 | v1.0.0 | Superseded | [Read v1 docs](/guide/getting-started) | Initial stable public API. |
 

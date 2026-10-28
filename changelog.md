@@ -11,6 +11,12 @@ The source changelog lives in the client repository:
 https://github.com/php-n8n/client/blob/main/CHANGELOG.md
 ```
 
+## v1.0.4 - 2026-10-28
+
+- Added package `authors` metadata to `composer.json`.
+- Allowed `squizlabs/php_codesniffer` ^4.0 as a development dependency.
+- No runtime API changes.
+
 ## v1.0.3 - 2026-10-28
 
 - Pinned all GitHub Actions to full commit SHAs and upgraded `actions/checkout`, `actions/upload-artifact`, and `codecov/codecov-action` to v7.
@@ -44,6 +50,6 @@ https://github.com/php-n8n/client/blob/main/CHANGELOG.md
 
 `php-n8n/client` follows Semantic Versioning.
 
-The latest stable release is `v1.0.3`.
+The latest stable release is `v1.0.4`.
 
 `v1.0.0` established the initial stable public API for the client package. Future breaking changes will be reserved for major releases.
